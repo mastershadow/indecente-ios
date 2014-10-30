@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HAt-xU-SJu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Indecente" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +18,206 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indecente_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vm8-0i-Wir">
+                                <rect key="frame" x="0.0" y="-20" width="600" height="620"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vm8-0i-Wir" secondAttribute="height" multiplier="12:17" id="M5v-vC-WTQ"/>
+                                    <constraint firstAttribute="height" constant="960" id="OFA-3d-Iuc"/>
+                                    <constraint firstAttribute="width" constant="320" id="o6d-pJ-xjD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M5v-vC-WTQ"/>
+                                        <exclude reference="OFA-3d-Iuc"/>
+                                        <exclude reference="o6d-pJ-xjD"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indecente_render.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VW-Jc-GUs">
+                                <rect key="frame" x="0.0" y="302" width="600" height="298"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0VW-Jc-GUs" secondAttribute="height" multiplier="320:159" id="3u6-SQ-axF"/>
+                                    <constraint firstAttribute="height" constant="159" id="mfH-e7-lba"/>
+                                    <constraint firstAttribute="width" constant="320" id="nfy-g6-tfM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mfH-e7-lba"/>
+                                        <exclude reference="nfy-g6-tfM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="441" width="320" height="159"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4N-Dg-XSi">
+                                <rect key="frame" x="422" y="207" width="162" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMw-u2-J36" customClass="IndButton" customModule="Indecente" customModuleProvider="target">
+                                        <rect key="frame" x="84" y="8" width="78" height="32"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Copione">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvY-ns-m2M" customClass="IndButton" customModule="Indecente" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="82" width="97" height="32"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Fotogallery">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-Vh-Pty" customClass="IndButton" customModule="Indecente" customModuleProvider="target">
+                                        <rect key="frame" x="49" y="119" width="113" height="32"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Date &amp; Eventi">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jG-V4-TtK" customClass="IndButton" customModule="Indecente" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="156" width="125" height="32"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Guarda il trailer">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVj-fL-Pm9" customClass="IndButton" customModule="Indecente" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="45" width="52" height="32"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Cast">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="iDb-P1-kxt"/>
+                                    <constraint firstAttribute="width" constant="162" id="riV-LL-sW9"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indecente_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="EZk-hN-X2P">
+                                <rect key="frame" x="344" y="10" width="240" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="L2m-Ji-dNe"/>
+                                    <constraint firstAttribute="width" constant="240" id="uaI-pu-Lag"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-U1-3aF" customClass="IndButton" customModule="Indecente" customModuleProvider="target">
+                                <rect key="frame" x="16" y="284" width="65" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3Pw-WQ-inm"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Gioca!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uWc-JX-C1Y" kind="show" identifier="game" id="XCF-TV-mTH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw4-UD-OSO">
+                                <rect key="frame" x="8" y="575" width="102" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                <state key="normal" title="by Eduard Roccatello">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fw4-UD-OSO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-8" id="17d-SG-DBA"/>
+                            <constraint firstItem="0VW-Jc-GUs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="4dZ-zu-Y4b"/>
+                            <constraint firstItem="y4N-Dg-XSi" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="804-P9-NMt"/>
+                            <constraint firstItem="EZk-hN-X2P" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="8sS-RK-a2i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0VW-Jc-GUs" secondAttribute="trailing" constant="-16" id="E9x-Ot-ETS"/>
+                            <constraint firstAttribute="centerX" secondItem="Vm8-0i-Wir" secondAttribute="centerX" id="Nfj-6w-ZQA"/>
+                            <constraint firstItem="Vm8-0i-Wir" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="OMJ-yL-bx9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Fw4-UD-OSO" secondAttribute="bottom" id="OWe-Y9-xcn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Vm8-0i-Wir" secondAttribute="bottom" id="Vng-J9-rJ3"/>
+                            <constraint firstItem="CZl-U1-3aF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Xin-rr-VBG"/>
+                            <constraint firstAttribute="centerY" secondItem="Vm8-0i-Wir" secondAttribute="centerY" id="XqQ-cy-oFL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0VW-Jc-GUs" secondAttribute="bottom" id="aU2-7N-95Z"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vm8-0i-Wir" secondAttribute="bottom" id="dHP-ce-JS4"/>
+                            <constraint firstItem="Vm8-0i-Wir" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="uaH-4f-IMv"/>
+                            <constraint firstAttribute="centerY" secondItem="CZl-U1-3aF" secondAttribute="centerY" id="vw3-go-WnF"/>
+                            <constraint firstItem="EZk-hN-X2P" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="wGL-uV-L5w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0VW-Jc-GUs" secondAttribute="trailing" constant="-16" id="y7N-Ul-OJk"/>
+                            <constraint firstItem="y4N-Dg-XSi" firstAttribute="top" secondItem="EZk-hN-X2P" secondAttribute="bottom" constant="3" id="yzW-Z4-Gba"/>
+                            <constraint firstAttribute="trailing" secondItem="Vm8-0i-Wir" secondAttribute="trailing" id="zml-He-5xj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XqQ-cy-oFL"/>
+                                <exclude reference="E9x-Ot-ETS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="vyp-Ng-Jxa"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bg" destination="Vm8-0i-Wir" id="AHk-nQ-Uei"/>
+                        <outlet property="castButton" destination="LVj-fL-Pm9" id="meH-bc-AxI"/>
+                        <outlet property="copioneButton" destination="UMw-u2-J36" id="MsO-qO-uwj"/>
+                        <outlet property="creditsButton" destination="Fw4-UD-OSO" id="weN-7Y-ey4"/>
+                        <outlet property="galleryButton" destination="HvY-ns-m2M" id="18n-i6-enP"/>
+                        <outlet property="indecente" destination="EZk-hN-X2P" id="VVw-Ye-ijd"/>
+                        <outlet property="leftButtonLeftMarginConstraint" destination="Xin-rr-VBG" id="OVz-Bt-NQg"/>
+                        <outlet property="menuView" destination="y4N-Dg-XSi" id="dqh-dg-xGp"/>
+                        <outlet property="menuViewRightMarginContraint" destination="804-P9-NMt" id="0Lj-YE-3DM"/>
+                        <outlet property="newsButton" destination="EfD-Vh-Pty" id="Ten-Ic-cys"/>
+                        <outlet property="playButton" destination="CZl-U1-3aF" id="UM8-8f-r72"/>
+                        <outlet property="render" destination="0VW-Jc-GUs" id="4Jm-Pg-15f"/>
+                        <outlet property="titleRightMarginConstraint" destination="8sS-RK-a2i" id="J7D-Dd-xBg"/>
+                        <outlet property="trailerButton" destination="7jG-V4-TtK" id="mBY-em-gsp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133" y="124"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="CbF-5k-277">
+            <objects>
+                <viewController id="uWc-JX-C1Y" customClass="GameViewController" customModule="Indecente" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cCc-UO-6Vo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Akv-b0-7CK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OBu-3I-SrJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYO-iH-cVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="1104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dk0-4Z-DP8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HAt-xU-SJu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="U9a-yQ-fHN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="fTa-bK-ym8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZO5-70-hS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1223" y="204"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="indecente_bg.jpg" width="840" height="1190"/>
+        <image name="indecente_render.png" width="320" height="159"/>
+        <image name="indecente_text.png" width="160" height="189"/>
+    </resources>
 </document>

@@ -8,15 +8,30 @@
 
 import UIKit
 
+extension UINavigationController {
+    override public func shouldAutorotate() -> Bool {
+        return true;
+    }
+    
+    override public func supportedInterfaceOrientations() -> Int {
+        return topViewController.supportedInterfaceOrientations();
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:
+        AnyObject]?) -> Bool {
+        // UIButton.appearance().setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState: UIControlState.Normal)
+        window?.tintColor = UIColor.redColor()
+        window?.backgroundColor = UIColor.blackColor()
+            
+            return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
